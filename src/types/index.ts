@@ -26,6 +26,7 @@ export interface Food {
   nutrients: Nutrients;
   reasons: Reason[];
   medNote?: string;
+  image?: string;
 }
 
 export const SEXES = ['หญิง', 'ชาย'] as const;

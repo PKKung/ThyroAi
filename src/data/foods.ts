@@ -56,6 +56,27 @@ export const FOODS: Food[] = [
     reasons: [b('น้ำตาลสูงมาก'), b('เพิ่มน้ำหนักง่าย ซึ่งเป็นปัญหาที่พบบ่อยในภาวะไทรอยด์ต่ำ')] },
 ];
 
+/** รูปจริงจาก Unsplash (ใช้ฟรีตาม Unsplash License) — เปลี่ยนเป็น '/foods/<id>.jpg' เพื่อใช้รูปของตัวเอง */
+const unsplash = (id: string) => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=600&h=600&q=70`;
+const PHOTOS: Record<string, string> = {
+  salmon: unsplash('1675209705883-7aec595f5aa8'),
+  rice: unsplash('1680137248876-6ad53db8caef'),
+  tofu: unsplash('1758293121435-396ed31ebcf4'),
+  fish: unsplash('1760504526044-840cade997b2'),
+  veg: unsplash('1599297915779-0dadbd376d49'),
+  egg: unsplash('1577111064880-4601019411fe'),
+  banana: unsplash('1528825871115-3581a5387919'),
+  basil: unsplash('1707897634981-39bcfe435268'),
+  somtam: unsplash('1681740722342-180eddba5f4a'),
+  broc: unsplash('1762631882592-25bc08678af6'),
+  soy: unsplash('1517448931760-9bf4414148c5'),
+  coffee: unsplash('1514432324607-a09d9b4aefdd'),
+  noodle: unsplash('1612927601601-6638404737ce'),
+  fried: unsplash('1426869981800-95ebf51ce900'),
+  boba: unsplash('1756132539966-8d65f7a9eed8'),
+};
+FOODS.forEach((f) => { f.image = PHOTOS[f.id]; });
+
 const byId = new Map(FOODS.map((f) => [f.id, f]));
 export const getFood = (id: string): Food | undefined => byId.get(id);
 

@@ -1,4 +1,4 @@
-import type { CSSProperties } from 'react';
+import { useState, type CSSProperties } from 'react';
 import type { Food } from '@/types';
 
 interface PlateProps {
@@ -6,9 +6,16 @@ interface PlateProps {
   size?: number;
 }
 
-/** ภาพจานอาหารแบบวาด (แทนรูปถ่ายในข้อมูลจำลอง) */
 export function Plate({ food, size = 64 }: PlateProps) {
+  const [failed, setFailed] = useState(false);
   const style = { '--s': `${size}px`, '--h': food.hue } as CSSProperties;
+
+  if (!failed) {
+    return (
+      <img className="plate plate--photo" style={style} src={food.image ?? `/foods/${food.id}.jpg`}
+        alt={food.name} loading="lazy" onError={() => setFailed(true)} />
+    );
+  }
   return (
     <div className="plate" style={style} role="img" aria-label={food.name}>
       <span className="plate__main">{food.emoji}</span>
