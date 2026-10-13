@@ -1,0 +1,67 @@
+/* ThyroAI design tokens — โทนน้ำเงินเข้ม → ฟ้า */
+:root {
+  --bg: #eaf0f8;
+  --surface: #ffffff;
+  --surface-alt: #f3f6fc;
+  --border: #dae3f0;
+  --text: #0e2140;
+  --text-muted: #5b6c88;
+  --text-faint: #8c9ab2;
+
+  --primary: #1d4fd8;
+  --primary-hover: #2e6bf0;
+  --primary-ink: #ffffff;
+  --primary-light: #e3ebff;
+  --sky: #38b2ee;
+  --deep: #0a2a6e;
+  --hero-from: #0a2a6e;
+  --hero-to: #1d4fd8;
+
+  --plate: #ffffff;
+  --plate-rim: #e4eaf3;
+
+  --success: #178a5c;
+  --success-light: #dff4ea;
+  --warning: #b07800;
+  --warning-light: #fff1cf;
+  --danger: #cf2f43;
+  --danger-light: #fce4e7;
+
+  --shadow-sm: 0 1px 2px rgba(14, 33, 64, 0.05);
+  --shadow-md: 0 1px 2px rgba(14, 33, 64, 0.06), 0 8px 24px rgba(14, 33, 64, 0.08);
+  --shadow-xl: 0 30px 80px rgba(10, 30, 70, 0.22);
+
+  --space-1: 4px; --space-2: 8px; --space-3: 12px; --space-4: 16px; --space-5: 20px; --space-6: 24px; --space-8: 32px;
+  --radius-sm: 8px; --radius-md: 12px; --radius-lg: 16px; --radius-xl: 20px; --radius-full: 999px;
+
+  --font-display: 'Bai Jamjuree', 'IBM Plex Sans Thai', system-ui, sans-serif;
+  --font-sans: 'IBM Plex Sans Thai', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --text-xs: 11.5px; --text-sm: 13px; --text-base: 14px; --text-md: 15px; --text-lg: 17px; --text-xl: 22px;
+
+  --z-overlay: 10; --z-toast: 50;
+  --transition-fast: 0.15s ease; --transition-base: 0.3s ease;
+  --shell-width: 440px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #070e1c; --surface: #0f1a30; --surface-alt: #15223d; --border: #22365c;
+    --text: #e4ecf8; --text-muted: #9aabc6; --text-faint: #6f80a0;
+    --primary: #5e8eff; --primary-hover: #7aa3ff; --primary-ink: #06112a; --primary-light: #172c58;
+    --sky: #5fcbf7; --deep: #bfd1ff; --hero-from: #13306e; --hero-to: #1f4cc0;
+    --plate: #f2f5fa; --plate-rim: #c9d3e2;
+    --success: #4fcb93; --success-light: #0e2e22; --warning: #f2be4a; --warning-light: #33270a; --danger: #ff7c8b; --danger-light: #3a1219;
+    --shadow-md: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 28px rgba(0, 0, 0, 0.35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme='dark'] {
+  --bg: #070e1c; --surface: #0f1a30; --surface-alt: #15223d; --border: #22365c;
+  --text: #e4ecf8; --text-muted: #9aabc6; --text-faint: #6f80a0;
+  --primary: #5e8eff; --primary-hover: #7aa3ff; --primary-ink: #06112a; --primary-light: #172c58;
+  --sky: #5fcbf7; --deep: #bfd1ff; --hero-from: #13306e; --hero-to: #1f4cc0;
+  --plate: #f2f5fa; --plate-rim: #c9d3e2;
+  --success: #4fcb93; --success-light: #0e2e22; --warning: #f2be4a; --warning-light: #33270a; --danger: #ff7c8b; --danger-light: #3a1219;
+  --shadow-md: 0 1px 2px rgba(0, 0, 0, 0.3), 0 10px 28px rgba(0, 0, 0, 0.35);
+  color-scheme: dark;
+}
